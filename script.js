@@ -5,7 +5,7 @@ $(document).ready(function() {
     ];
 
 
-    function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
+    function generateButtons(arrayToUse, classToAdd, areaToAddTo) {
         $(areaToAddTo).empty();
 
         for (var i = 0; i < arrayToUse.length; i++) {
@@ -35,15 +35,12 @@ $(document).ready(function() {
 
                 for (var i = 0; i < results.length; i++) {
                     var heroDiv = $("<div class=\"hero-item\">");
-
                     var rating = results[i].rating;
-
                     var p = $("<p>").text("Rating: " + rating);
-
                     var animated = results[i].images.fixed_height.url;
                     var still = results[i].images.fixed_height_still.url;
-
                     var heroImage = $("<img>");
+
                     heroImage.attr("src", still);
                     heroImage.attr("data-still", still);
                     heroImage.attr("data-animate", animated);
@@ -79,9 +76,8 @@ $(document).ready(function() {
             heroes.push(newHero);
         }
 
-        populateButtons(heroes, "hero-button", "#hero-buttons");
+        generateButtons(heroes, "hero-button", "#hero-buttons");
 
     });
-
-    populateButtons(heroes, "hero-button", "#hero-buttons");
+    generateButtons(heroes, "hero-button", "#hero-buttons");
 });
