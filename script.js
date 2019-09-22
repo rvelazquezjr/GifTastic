@@ -80,8 +80,4 @@ $(document).ready(function() {
 
     });
     generateButtons(heroes, "hero-button", "#hero-buttons");
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 0e6eb1ab190d09a16c6c1611616d4d413ba4a712
